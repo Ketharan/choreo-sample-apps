@@ -21,7 +21,7 @@ import ballerina/http;
 # bound to port `9090`.
 service / on new http:Listener(9090) {
 
-    resource function 'default [string... paths](http:Request req) returns string {
+    resource function get /() returns string {
         return "Hello, from default";
     }
 
